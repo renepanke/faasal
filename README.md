@@ -2,7 +2,7 @@
 
 > faasal (FaaS Abstraction Layer) is a proof of concept of abstracting away the underlying cloud provider.
 
-## What is not covered (yet) by this abstraction layer
+## What is not covered (yet?!) by this abstraction layer
 
 - Uploading to the respective platform
 - Trigger setup (AWS Gateway, HTTP Trigger for Azure & Google)
