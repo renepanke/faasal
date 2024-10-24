@@ -164,7 +164,7 @@ When extracting those jar containers they will contain the following files:
 
 #### faasal-1.0.0-gcp-function
 
-> Jackson is used for serialization and could be replaced with a more lightweight library.
+> Here `com.fasterxml.jackson` is used for serialization and could be replaced with a more lightweight library like [gson from Google](https://github.com/google/gson) which has only a[ size of 291 KB in the current release](https://repo1.maven.org/maven2/com/google/code/gson/gson/2.11.0/) instead of the [1,6 MB jackson-databind comes with](https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.18.0/).
 
 ```
 ├── com
