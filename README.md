@@ -4,7 +4,9 @@
 
 ## Usage
 
-With the following platform specific commands a jar is output that contains only the cloud-platform specific dependencies
+You would implement just the `Function` interface like to be seen in [this test class.](https://github.com/renepanke/faasal/blob/master/src/test/java/io/github/renepanke/faasal/FunctionImplementationTest.java)
+
+With the following platform specific commands jars are output that contain only the cloud-platform specific dependencies
 and sourcecode so that it can be instantly uploaded to the cloud-platform.
 
 This is achieved by using the following maven plugins and functions:
