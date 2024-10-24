@@ -39,20 +39,17 @@
                                 </goals>
                                 <configuration>
                                     <artifactSet>
-                                        <excludes>
-                                            <exclude>com.fasterxml.jackson.core:*</exclude>
-                                            <exclude>com.google.cloud.functions:*</exclude>
-                                            <exclude>com.microsoft.azure.functions:*</exclude>
-                                            <exclude>io.cloudevents:*</exclude>
-                                        </excludes>
+                                        <includes>
+                                            <include>com.amazonaws:*</include>
+                                        </includes>
                                     </artifactSet>
                                     <filters>
                                         <filter>
                                             <artifact>io.github.renepanke:faasal</artifact>
-                                            <excludes>
-                                                <exclude>io/github/renepanke/faasal/azure/*.class</exclude>
-                                                <exclude>io/github/renepanke/faasal/gcp/*.class</exclude>
-                                            </excludes>
+                                            <includes>
+                                                <include>io/github/renepanke/faasal/api/*.class</include>
+                                                <include>io/github/renepanke/faasal/aws/*.class</include>
+                                            </includes>
                                         </filter>
                                     </filters>
                                     <outputDirectory>${project.build.directory}</outputDirectory>
@@ -60,6 +57,17 @@
                                 </configuration>
                             </execution>
                         </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.13.0</version>
+                        <configuration>
+                            <includes>
+                                <include>io/github/renepanke/faasal/api/*.java</include>
+                                <include>io/github/renepanke/faasal/aws/*.java</include>
+                            </includes>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
@@ -89,20 +97,17 @@
                                 </goals>
                                 <configuration>
                                     <artifactSet>
-                                        <excludes>
-                                            <exclude>com.amazonaws:*</exclude>
-                                            <exclude>com.fasterxml.jackson.core:*</exclude>
-                                            <exclude>com.google.cloud.functions:*</exclude>
-                                            <exclude>io.cloudevents:*</exclude>
-                                        </excludes>
+                                        <includes>
+                                            <include>com.microsoft.azure.functions:*</include>
+                                        </includes>
                                     </artifactSet>
                                     <filters>
                                         <filter>
                                             <artifact>io.github.renepanke:faasal</artifact>
-                                            <excludes>
-                                                <exclude>io/github/renepanke/faasal/aws/*.class</exclude>
-                                                <exclude>io/github/renepanke/faasal/gcp/*.class</exclude>
-                                            </excludes>
+                                            <includes>
+                                                <include>io/github/renepanke/faasal/api/*.class</include>
+                                                <include>io/github/renepanke/faasal/azure/*.class</include>
+                                            </includes>
                                         </filter>
                                     </filters>
                                     <outputDirectory>${project.build.directory}</outputDirectory>
@@ -110,6 +115,17 @@
                                 </configuration>
                             </execution>
                         </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.13.0</version>
+                        <configuration>
+                            <includes>
+                                <include>io/github/renepanke/faasal/api/*.java</include>
+                                <include>io/github/renepanke/faasal/azure/*.java</include>
+                            </includes>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
@@ -144,18 +160,19 @@
                                 </goals>
                                 <configuration>
                                     <artifactSet>
-                                        <excludes>
-                                            <exclude>com.amazonaws:*</exclude>
-                                            <exclude>com.microsoft.azure.functions:*</exclude>
-                                        </excludes>
+                                        <includes>
+                                            <include>com.fasterxml.jackson.core:*</include>
+                                            <include>com.google.cloud.functions:*</include>
+                                            <include>io.cloudevents:*</include>
+                                        </includes>
                                     </artifactSet>
                                     <filters>
                                         <filter>
                                             <artifact>io.github.renepanke:faasal</artifact>
-                                            <excludes>
-                                                <exclude>io/github/renepanke/faasal/aws/*.class</exclude>
-                                                <exclude>io/github/renepanke/faasal/azure/*.class</exclude>
-                                            </excludes>
+                                            <includes>
+                                                <include>io/github/renepanke/faasal/api/*.class</include>
+                                                <include>io/github/renepanke/faasal/gcp/*.class</include>
+                                            </includes>
                                         </filter>
                                     </filters>
                                     <outputDirectory>${project.build.directory}</outputDirectory>
@@ -163,6 +180,17 @@
                                 </configuration>
                             </execution>
                         </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.13.0</version>
+                        <configuration>
+                            <includes>
+                                <include>io/github/renepanke/faasal/api/*.java</include>
+                                <include>io/github/renepanke/faasal/gcp/*.java</include>
+                            </includes>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
