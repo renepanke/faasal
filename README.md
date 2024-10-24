@@ -2,6 +2,16 @@
 
 > faasal (FaaS Abstraction Layer) is a proof of concept of abstracting away the underlying cloud provider.
 
+## What is not covered (yet) by this abstraction layer
+
+- Uploading to the respective platform
+- Trigger setup (AWS Gateway, HTTP Trigger for Azure & Google)
+- Permissions
+- Environment variables/secrets & other function specific settings
+- Deploying
+- Testing via HTTP
+
+
 ## Usage
 
 You would implement just the `Function` abstract class like to be seen in [this test class.](https://github.com/renepanke/faasal/blob/master/src/test/java/io/github/renepanke/faasal/FunctionImplementationTest.java)
