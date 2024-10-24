@@ -4,7 +4,7 @@
 
 ## Usage
 
-You would implement just the `Function` interface like to be seen in [this test class.](https://github.com/renepanke/faasal/blob/master/src/test/java/io/github/renepanke/faasal/FunctionImplementationTest.java)
+You would implement just the `Function` abstract class like to be seen in [this test class.](https://github.com/renepanke/faasal/blob/master/src/test/java/io/github/renepanke/faasal/FunctionImplementationTest.java)
 
 With the following platform specific commands jars are output that contain only the cloud-platform specific dependencies
 and sourcecode so that it can be instantly uploaded to the cloud-platform.
